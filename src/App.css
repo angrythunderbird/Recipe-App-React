@@ -1,0 +1,12 @@
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+}

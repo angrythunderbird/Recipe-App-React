@@ -1,25 +1,24 @@
 import { useEffect, useState } from "react";
 import getData from "../services/apiService";
+import Slider from "./Slider";
+
+import './popular.css';
+
 
 function Popular() {
   const [popular, setPopular] = useState([]);
 
   useEffect(() => {
-    // let cancelled = false;
-    getData('random')
+    getData('random', 6)
       .then((data) => setPopular(data.recipes));
-      
-    // return () => cancelled = true;
   }, []);
 
   return (
-    <div>
-      {popular.map((recipe) => {
-        return (
-          <div key={recipe.id}>{recipe.title}</div>
-        )
-      })}
-    </div>
+    <>
+      <div className="popular-wrapper">
+        <Slider popular={popular} />
+      </div>
+    </>
   );
 };
 

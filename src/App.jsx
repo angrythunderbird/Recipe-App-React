@@ -1,12 +1,18 @@
+import { useRef } from 'react';
 import Pages from './pages/Pages';
 
 import './App.css';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 function App() {
+
   return (
     <div className="App">
-      <header>Hello</header>
-      <Pages />
+      <div className='container' id='container'>
+        <header>Hello</header>
+        <Pages />
+      </div>
     </div>
   );
 }
